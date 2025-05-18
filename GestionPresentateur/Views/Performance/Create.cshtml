@@ -1,0 +1,41 @@
+﻿@model GestionPresentateur.Models.Performance
+
+<div class="container mt-4">
+    <h2>Create Performance</h2>
+    <form asp-action="Create" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="CodeN" class="control-label">Number</label>
+            <select asp-for="CodeN" class="form-control">
+                @foreach (var numero in ViewBag.Numeros)
+                {
+                    <option value="@numero.CodeN">@numero.Titre</option>
+                }
+            </select>
+            <span asp-validation-for="CodeN" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="CompteId" class="control-label">User</label>
+            <select asp-for="CompteId" class="form-control">
+                @foreach (var user in ViewBag.Users)
+                {
+                    <option value="@user.Id">@user.UserName</option>
+                }
+            </select>
+            <span asp-validation-for="CompteId" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PerformanceDate" class="control-label"></label>
+            <input asp-for="PerformanceDate" class="form-control" type="datetime-local" />
+            <span asp-validation-for="PerformanceDate" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <input type="submit" value="Create" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

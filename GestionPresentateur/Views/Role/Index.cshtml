@@ -1,0 +1,34 @@
+﻿@model IEnumerable<GestionPresentateur.Models.Role>
+
+<div class="container mt-4">
+    <h2>Roles</h2>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+    <p>
+        <a asp-action="Create" class="btn btn-success">Create New</a>
+    </p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Label</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Libelle</td>
+                    <td>@item.Prix.ToString("C")</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.CodeR" class="btn btn-warning btn-sm">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.CodeR" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

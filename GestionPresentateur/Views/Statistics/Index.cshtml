@@ -1,0 +1,40 @@
+﻿@model dynamic
+
+<div class="container mt-4">
+    <h2>Statistics Dashboard</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Presenters</h5>
+                    <p class="card-text">@Model.TotalPresentateurs</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Numbers</h5>
+                    <p class="card-text">@Model.TotalNumeros</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-info mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Performances</h5>
+                    <p class="card-text">@Model.TotalPerformances</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Total Revenue</h5>
+                    <p class="card-text">@Model.TotalRevenue.ToString("C")</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a asp-action="ExportCsv" class="btn btn-info">Export to CSV</a>
+</div>

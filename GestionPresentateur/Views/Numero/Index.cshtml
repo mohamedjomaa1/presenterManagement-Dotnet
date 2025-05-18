@@ -1,0 +1,60 @@
+﻿@model IEnumerable<GestionPresentateur.Models.Numero>
+
+<div class="container mt-4">
+    <h2>Circus Numbers</h2>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+    <form asp-action="Index" method="get" class="mb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <input type="text" name="searchString" class="form-control" placeholder="Search by title" value="@ViewData["CurrentFilter"]" />
+            </div>
+            <div class="col-md-4">
+                <input type="number" name="minDuration" class="form-control" placeholder="Min duration (minutes)" value="@ViewData["CurrentDuration"]" />
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary">Search</button>
+                @if (User.IsInRole("Admin"))
+                {
+                    <a asp-action="Create" class="btn btn-success">Create New</a>
+                }
+            </div>
+        </div>
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Duration (min)</th>
+                <th>Presenter</th>
+                <th>Role</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Titre</td>
+                    <td>@item.Duree</td>
+                    <td>@item.Presentateur.NomP</td>
+                    <td>@item.Presentateur.Role.Libelle</td>
+                    <td>
+                        <form asp-action="Buy" method="post" class="d-inline">
+                            <input type="hidden" name="id" value="@item.CodeN" />
+                            <button type="submit" class="btn btn-success btn-sm">Buy Ticket</button>
+                        </form>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.CodeN" class="btn btn-warning btn-sm">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@item.CodeN" class="btn btn-danger btn-sm">Delete</a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

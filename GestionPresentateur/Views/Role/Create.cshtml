@@ -1,0 +1,26 @@
+﻿@model GestionPresentateur.Models.Role
+
+<div class="container mt-4">
+    <h2>Create Role</h2>
+    <form asp-action="Create" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Libelle" class="control-label"></label>
+            <input asp-for="Libelle" class="form-control" />
+            <span asp-validation-for="Libelle" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Prix" class="control-label"></label>
+            <input asp-for="Prix" class="form-control" type="number" step="0.01" />
+            <span asp-validation-for="Prix" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <input type="submit" value="Create" class="btn btn-primary" />
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
