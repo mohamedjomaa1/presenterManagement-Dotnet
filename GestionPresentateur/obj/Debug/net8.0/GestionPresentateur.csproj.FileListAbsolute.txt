@@ -295,3 +295,4 @@ C:\Users\med_j\Desktop\GestionPresentateur\GestionPresentateur\bin\Debug\net8.0\
 C:\Users\med_j\Desktop\GestionPresentateur\GestionPresentateur\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\med_j\Desktop\GestionPresentateur\GestionPresentateur\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\med_j\Desktop\GestionPresentateur\GestionPresentateur\obj\Debug\net8.0\GestionPresentateur.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\med_j\Desktop\GestionPresentateur\GestionPresentateur\obj\Debug\net8.0\GestionPresentateur.sourcelink.json

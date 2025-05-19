@@ -6,8 +6,8 @@ using GestionPresentateur.Models;
 
 namespace GestionPresentateur.Controllers
 {
-    [Authorize]
-    //[Authorize(Roles = "Admin")] ----------------------------------------------
+   
+    [Authorize(Roles = "Admin")]
     public class PerformanceController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -40,12 +40,11 @@ namespace GestionPresentateur.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Performance performance)
         {
-            if (ModelState.IsValid)
-            {
+            
                 _context.Add(performance);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+            
             ViewBag.Numeros = _context.Numeros.ToList();
             ViewBag.Users = _context.Users.ToList();
             return View(performance);
@@ -74,8 +73,7 @@ namespace GestionPresentateur.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+            
                 try
                 {
                     _context.Update(performance);
@@ -90,7 +88,7 @@ namespace GestionPresentateur.Controllers
                     throw;
                 }
                 return RedirectToAction(nameof(Index));
-            }
+            
             ViewBag.Numeros = _context.Numeros.ToList();
             ViewBag.Users = _context.Users.ToList();
             return View(performance);

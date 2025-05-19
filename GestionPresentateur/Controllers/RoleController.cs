@@ -6,8 +6,8 @@ using GestionPresentateur.Models;
 
 namespace GestionPresentateur.Controllers
 {
-    [Authorize]
-    //[Authorize(Roles = "Admin")] ---------------------------------------------
+    
+    [Authorize(Roles = "Admin")] 
     public class RoleController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -34,12 +34,11 @@ namespace GestionPresentateur.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Role role)
         {
-            if (ModelState.IsValid)
-            {
+            
                 _context.Add(role);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+           
             return View(role);
         }
 
@@ -64,8 +63,7 @@ namespace GestionPresentateur.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+           
                 try
                 {
                     _context.Update(role);
@@ -80,7 +78,7 @@ namespace GestionPresentateur.Controllers
                     throw;
                 }
                 return RedirectToAction(nameof(Index));
-            }
+            
             return View(role);
         }
 

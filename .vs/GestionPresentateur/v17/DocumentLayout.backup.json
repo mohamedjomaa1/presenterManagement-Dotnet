@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\med_j\\Desktop\\GestionPresentateur\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B964C042-2F6B-4624-A312-5374894E70AC}|GestionPresentateur\\GestionPresentateur.csproj|c:\\users\\med_j\\desktop\\gestionpresentateur\\gestionpresentateur\\controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B964C042-2F6B-4624-A312-5374894E70AC}|GestionPresentateur\\GestionPresentateur.csproj|solutionrelative:gestionpresentateur\\controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B964C042-2F6B-4624-A312-5374894E70AC}|GestionPresentateur\\GestionPresentateur.csproj|c:\\users\\med_j\\desktop\\gestionpresentateur\\gestionpresentateur\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B964C042-2F6B-4624-A312-5374894E70AC}|GestionPresentateur\\GestionPresentateur.csproj|solutionrelative:gestionpresentateur\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B964C042-2F6B-4624-A312-5374894E70AC}|GestionPresentateur\\GestionPresentateur.csproj|c:\\users\\med_j\\desktop\\gestionpresentateur\\gestionpresentateur\\controllers\\numerocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B964C042-2F6B-4624-A312-5374894E70AC}|GestionPresentateur\\GestionPresentateur.csproj|solutionrelative:gestionpresentateur\\controllers\\numerocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B964C042-2F6B-4624-A312-5374894E70AC}|GestionPresentateur\\GestionPresentateur.csproj|c:\\users\\med_j\\desktop\\gestionpresentateur\\gestionpresentateur\\controllers\\performancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B964C042-2F6B-4624-A312-5374894E70AC}|GestionPresentateur\\GestionPresentateur.csproj|solutionrelative:gestionpresentateur\\controllers\\performancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B964C042-2F6B-4624-A312-5374894E70AC}|GestionPresentateur\\GestionPresentateur.csproj|c:\\users\\med_j\\desktop\\gestionpresentateur\\gestionpresentateur\\controllers\\presentateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B964C042-2F6B-4624-A312-5374894E70AC}|GestionPresentateur\\GestionPresentateur.csproj|solutionrelative:gestionpresentateur\\controllers\\presentateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B964C042-2F6B-4624-A312-5374894E70AC}|GestionPresentateur\\GestionPresentateur.csproj|c:\\users\\med_j\\desktop\\gestionpresentateur\\gestionpresentateur\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B964C042-2F6B-4624-A312-5374894E70AC}|GestionPresentateur\\GestionPresentateur.csproj|solutionrelative:gestionpresentateur\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,15 +54,80 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PresentateurController.cs",
+              "DocumentMoniker": "C:\\Users\\med_j\\Desktop\\GestionPresentateur\\GestionPresentateur\\Controllers\\PresentateurController.cs",
+              "RelativeDocumentMoniker": "GestionPresentateur\\Controllers\\PresentateurController.cs",
+              "ToolTip": "C:\\Users\\med_j\\Desktop\\GestionPresentateur\\GestionPresentateur\\Controllers\\PresentateurController.cs",
+              "RelativeToolTip": "GestionPresentateur\\Controllers\\PresentateurController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T11:57:45.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PerformanceController.cs",
+              "DocumentMoniker": "C:\\Users\\med_j\\Desktop\\GestionPresentateur\\GestionPresentateur\\Controllers\\PerformanceController.cs",
+              "RelativeDocumentMoniker": "GestionPresentateur\\Controllers\\PerformanceController.cs",
+              "ToolTip": "C:\\Users\\med_j\\Desktop\\GestionPresentateur\\GestionPresentateur\\Controllers\\PerformanceController.cs",
+              "RelativeToolTip": "GestionPresentateur\\Controllers\\PerformanceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T11:56:04.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NumeroController.cs",
+              "DocumentMoniker": "C:\\Users\\med_j\\Desktop\\GestionPresentateur\\GestionPresentateur\\Controllers\\NumeroController.cs",
+              "RelativeDocumentMoniker": "GestionPresentateur\\Controllers\\NumeroController.cs",
+              "ToolTip": "C:\\Users\\med_j\\Desktop\\GestionPresentateur\\GestionPresentateur\\Controllers\\NumeroController.cs",
+              "RelativeToolTip": "GestionPresentateur\\Controllers\\NumeroController.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAAAEcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T11:53:48.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\med_j\\Desktop\\GestionPresentateur\\GestionPresentateur\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "GestionPresentateur\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\med_j\\Desktop\\GestionPresentateur\\GestionPresentateur\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "GestionPresentateur\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T11:53:46.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "StatisticsController.cs",
+              "DocumentMoniker": "C:\\Users\\med_j\\Desktop\\GestionPresentateur\\GestionPresentateur\\Controllers\\StatisticsController.cs",
+              "RelativeDocumentMoniker": "GestionPresentateur\\Controllers\\StatisticsController.cs",
+              "ToolTip": "C:\\Users\\med_j\\Desktop\\GestionPresentateur\\GestionPresentateur\\Controllers\\StatisticsController.cs",
+              "RelativeToolTip": "GestionPresentateur\\Controllers\\StatisticsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T11:57:19.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "RoleController.cs",
               "DocumentMoniker": "C:\\Users\\med_j\\Desktop\\GestionPresentateur\\GestionPresentateur\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "GestionPresentateur\\Controllers\\RoleController.cs",
               "ToolTip": "C:\\Users\\med_j\\Desktop\\GestionPresentateur\\GestionPresentateur\\Controllers\\RoleController.cs",
               "RelativeToolTip": "GestionPresentateur\\Controllers\\RoleController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T12:13:39.72Z",
+              "WhenOpened": "2025-05-19T11:57:28.922Z",
               "EditorCaption": ""
             }
           ]

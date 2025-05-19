@@ -7,8 +7,8 @@ using System.Linq;
 
 namespace GestionPresentateur.Controllers
 {
-    [Authorize]
-    //[Authorize(Roles = "Admin")] ----------------------------------------
+    
+    [Authorize(Roles = "Admin")] 
     public class PresentateurController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -39,12 +39,11 @@ namespace GestionPresentateur.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Presentateur presentateur)
         {
-            if (ModelState.IsValid)
-            {
+            
                 _context.Add(presentateur);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            }
+            
             ViewBag.Roles = _context.Roles.ToList();
             return View(presentateur);
         }
@@ -71,8 +70,7 @@ namespace GestionPresentateur.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+            
                 try
                 {
                     _context.Update(presentateur);
@@ -87,7 +85,7 @@ namespace GestionPresentateur.Controllers
                     throw;
                 }
                 return RedirectToAction(nameof(Index));
-            }
+            
             ViewBag.Roles = _context.Roles.ToList();
             return View(presentateur);
         }

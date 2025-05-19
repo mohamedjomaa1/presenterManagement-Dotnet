@@ -5,8 +5,9 @@ using GestionPresentateur.Data;
 
 namespace GestionPresentateur.Controllers
 {
-    [Authorize]
-    //[Authorize(Roles = "Admin")] ----------------------------------
+  
+
+    [Authorize(Roles = "Admin")] 
     public class StatisticsController : Controller
     {
         private readonly ApplicationDbContext _context;

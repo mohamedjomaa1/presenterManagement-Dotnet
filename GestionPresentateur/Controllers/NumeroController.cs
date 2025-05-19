@@ -69,7 +69,7 @@ namespace GestionPresentateur.Controllers
         }
 
         // Admin CRUD: Create
-        // [Authorize(Roles = "Admin")] -------------------------------------------------------
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewBag.Presentateurs = _context.Presentateurs.ToList();
@@ -77,23 +77,22 @@ namespace GestionPresentateur.Controllers
         }
 
         [HttpPost]
-        // [Authorize(Roles = "Admin")] --------------------------------------------------------
+        [Authorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Numero numero)
         {
-            if (ModelState.IsValid)
-            {
+            
                 _context.Add(numero);
                 await _context.SaveChangesAsync();
                 TempData["SuccessMessage"] = "Number created successfully!";
                 return RedirectToAction(nameof(Index));
-            }
+            
             ViewBag.Presentateurs = _context.Presentateurs.ToList();
             return View(numero);
         }
 
         // Admin CRUD: Edit
-        // [Authorize(Roles = "Admin")] ------------------------------------------------------
+        [Authorize(Roles = "Admin")] 
         public async Task<IActionResult> Edit(int id)
         {
             var numero = await _context.Numeros.FindAsync(id);
@@ -106,7 +105,7 @@ namespace GestionPresentateur.Controllers
         }
 
         [HttpPost]
-        // [Authorize(Roles = "Admin")]  ---------------------------------------------------------
+        [Authorize(Roles = "Admin")] 
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Numero numero)
         {
@@ -115,8 +114,7 @@ namespace GestionPresentateur.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+            
                 try
                 {
                     _context.Update(numero);
@@ -131,13 +129,13 @@ namespace GestionPresentateur.Controllers
                     throw;
                 }
                 return RedirectToAction(nameof(Index));
-            }
+            
             ViewBag.Presentateurs = _context.Presentateurs.ToList();
             return View(numero);
         }
 
         // Admin CRUD: Delete
-        // [Authorize(Roles = "Admin")] -------------------------------------------------------
+        [Authorize(Roles = "Admin")] 
         public async Task<IActionResult> Delete(int id)
         {
             var numero = await _context.Numeros.FindAsync(id);
@@ -149,7 +147,7 @@ namespace GestionPresentateur.Controllers
         }
 
         [HttpPost, ActionName("Delete")]
-        // [Authorize(Roles = "Admin")] --------------------------------------------------------
+        [Authorize(Roles = "Admin")] 
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {

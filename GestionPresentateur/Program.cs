@@ -15,6 +15,15 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.Sign
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequiredLength = 6;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireLowercase = false;
+});
+
 // Configure authentication cookie
 builder.Services.ConfigureApplicationCookie(options =>
 {
@@ -29,6 +38,14 @@ builder.Services.AddSingleton<IEmailSender, NullEmailSender>();
 // Add MVC and Razor Pages services
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+
+
+// Add logging
+builder.Services.AddLogging(loggingBuilder =>
+{
+    loggingBuilder.AddConsole();
+    loggingBuilder.AddDebug();
+});
 
 var app = builder.Build();
 
@@ -68,9 +85,10 @@ using (var scope = app.Services.CreateScope())
     var adminUser = new IdentityUser
     {
         UserName = "admin",
-        Email = "admin@admin.com"
+        Email = "admin@admin.com",
+        EmailConfirmed = true // Ensure login doesn’t require email confirmation
     };
-    string adminPassword = "Pwd123@";
+    string adminPassword = "pwd123";
     var user = await userManager.FindByEmailAsync(adminUser.Email);
     if (user == null)
     {
@@ -78,6 +96,20 @@ using (var scope = app.Services.CreateScope())
         if (createAdmin.Succeeded)
         {
             await userManager.AddToRoleAsync(adminUser, "Admin");
+        }
+        else
+        {
+            throw new Exception("Failed to create admin user: " + string.Join(", ", createAdmin.Errors.Select(e => e.Description)));
+        }
+    }
+    else
+    {
+        // Reset password if user exists to ensure pwd123 works
+        var token = await userManager.GeneratePasswordResetTokenAsync(user);
+        var resetResult = await userManager.ResetPasswordAsync(user, token, adminPassword);
+        if (resetResult.Succeeded)
+        {
+            await userManager.AddToRoleAsync(user, "Admin");
         }
     }
 }
